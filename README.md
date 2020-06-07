@@ -1,2 +1,2 @@
-# myalomatika-backend-
+# myalomatika-backend
 Myalomatika Backend
