@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class NumbersGenerator implements Constants{
     private static final Logger log = Logger.getLogger(NumbersGenerator.class);
 
-    public static String[] generate(int level, int digit, int count, double speed, boolean combo) {
+    public static ArrayList<MentalNumber> generate (int level, int digit, int count, boolean combo) {
         ArrayList<MentalNumber> numbers = new ArrayList<>();
 
         int result = 0;
@@ -33,11 +33,14 @@ public class NumbersGenerator implements Constants{
 
             numbers.add(new MentalNumber(
                     value,
-                    null,
                     randomColor
             ));
         }
 
-        return numbers.stream().map(MentalNumber::getNumber).toArray(String[]::new);
+        return numbers;
+    }
+
+    public static String[] generateJson (int level, int digit, int count, boolean combo) {
+      return generate(level, digit, count, combo).stream().map(MentalNumber::toJson).toArray(String[]::new);
     }
 }

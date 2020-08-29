@@ -21,15 +21,13 @@ public class ServerController {
     String[] getNumbers(@RequestParam("level") int level,
                          @RequestParam("digit") int digit,
                          @RequestParam("count") int count,
-                         @RequestParam("speed") double speed,
                          @RequestParam("combo") boolean combo) {
 
         log.info("Level: " + level);
         log.info("Digit: " + digit);
         log.info("Count: " + count);
-        log.info("Speed: " + speed);
         log.info("Combo: " + combo);
 
-        return NumbersGenerator.generate(level, digit, count, speed, combo);
+        return NumbersGenerator.generateJson(level, digit, count, combo);
     }
 }
