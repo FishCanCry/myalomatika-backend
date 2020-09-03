@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class ServerController {
+
     private static final Logger log = Logger.getLogger(ServerController.class);
 
     @RequestMapping("/")
