@@ -17,18 +17,4 @@ public class ServerController {
     String home() {
         return "Server is available";
     }
-
-    @RequestMapping("/getNumbers")
-    String[] getNumbers(@RequestParam("level") int level,
-                         @RequestParam("digit") int digit,
-                         @RequestParam("count") int count,
-                         @RequestParam("combo") boolean combo) {
-
-        log.info("Level: " + level);
-        log.info("Digit: " + digit);
-        log.info("Count: " + count);
-        log.info("Combo: " + combo);
-
-        return NumbersGenerator.generateJson(level, digit, count, combo);
-    }
 }

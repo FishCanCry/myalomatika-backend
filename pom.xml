@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cryfish</groupId>
-	<artifactId>myalomatika</artifactId>
+	<artifactId>myalomatika-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>myalomatika</name>
+	<name>myalomatika-backend</name>
 	<description>Back End for Mental Arithmetic</description>
 
 	<properties>
